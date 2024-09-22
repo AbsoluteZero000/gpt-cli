@@ -1,3 +1,6 @@
 1- add some sort of history
 2- branch switching contexts 
 3- send prompt
+4- add image attachment 
+5- add file attachment
+
