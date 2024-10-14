@@ -1,6 +1,8 @@
-1- add some sort of history
-2- branch switching contexts 
-3- send prompt
-4- add image attachment 
-5- add file attachment
+ ✅add some sort of history
+ ✅branch switching contexts 
+ ✅send prompt
+- add multiline prompt support
+- add image attachment 
+- add file attachment
+- switch to sqlite instead of in memory array to store conversations
 

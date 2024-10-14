@@ -46,14 +46,17 @@ fn switch(conversations: &HashMap<String, Vec<Message>>) -> String {
 
 fn main() -> Result<(), Box<dyn Error>> {
     dotenv().ok();
+
     let mut conversations: HashMap<String, Vec<Message>> = HashMap::new();
-    println!("GPT CLI\n");
-    print!("Enter the conversation name: ");
     let _ = stdout().flush();
     let mut conversation_id = String::new();
+
+    println!("GPT CLI\n");
+    print!("Enter the conversation name: ");
     stdin()
         .read_line(&mut conversation_id)
         .expect("Failed to read line");
+
     conversation_id = conversation_id.trim().to_string();
     conversations.insert(conversation_id.clone(), vec![]);
 
@@ -72,6 +75,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 conversation_id = String::new();
                 println!("Conversation cleared. Please enter a new conversation name:");
                 print!("> ");
+
                 let _ = stdout().flush();
                 stdin()
                     .read_line(&mut conversation_id)
